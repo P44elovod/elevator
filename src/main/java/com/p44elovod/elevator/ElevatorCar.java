@@ -1,46 +1,30 @@
 package com.p44elovod.elevator;
 
+
+import lombok.Getter;
+
+import java.util.UUID;
+
+@Getter
 public class ElevatorCar {
 
+    private Long id;
     private Integer height;
     private Integer width;
     private Integer length;
     private Integer carryingCapacity;
 
 
+    public ElevatorCar(Integer height, Integer width, Integer length, Integer carryingCapacity) {
 
-
-    public Integer getHeight() {
-        return height;
-    }
-
-    public void setHeight(Integer height) {
+        this.id = UUID.randomUUID().getMostSignificantBits();
         this.height = height;
-    }
-
-    public Integer getWidth() {
-        return width;
-    }
-
-    public void setWidth(Integer width) {
         this.width = width;
-    }
-
-    public Integer getLength() {
-        return length;
-    }
-
-    public void setLength(Integer length) {
         this.length = length;
-    }
-
-    public Integer getCarryingCapacity() {
-        return carryingCapacity;
-    }
-
-    public void setCarryingCapacity(Integer carryingCapacity) {
         this.carryingCapacity = carryingCapacity;
     }
+
+
 }
 
 

@@ -1,32 +1,24 @@
 package com.p44elovod.elevator;
 
-public class ElevatorServiseMan extends User{
+import lombok.Getter;
 
+import java.util.UUID;
+
+@Getter
+public class ElevatorServiseMan {
+
+    private Long id;
+    private Integer age;
     private String skillLevel;
     private String reactionTime;
     private boolean drunk;
 
-    public String getSkillLevel() {
-        return skillLevel;
-    }
+    public ElevatorServiseMan(Integer age, String skillLevel, String reactionTime, boolean drunk) {
 
-    public void setSkillLevel(String skillLevel) {
+        this.id = UUID.randomUUID().getMostSignificantBits();
+        this.age = age;
         this.skillLevel = skillLevel;
-    }
-
-    public String getReactionTime() {
-        return reactionTime;
-    }
-
-    public void setReactionTime(String reactionTime) {
         this.reactionTime = reactionTime;
-    }
-
-    public boolean isDrunk() {
-        return drunk;
-    }
-
-    public void setDrunk(boolean drunk) {
         this.drunk = drunk;
     }
 }

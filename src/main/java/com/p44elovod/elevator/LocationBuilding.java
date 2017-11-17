@@ -1,11 +1,16 @@
 package com.p44elovod.elevator;
 
+import lombok.Getter;
+
+import java.util.UUID;
+
+@Getter
 public class LocationBuilding {
+    private Long id;
     private Integer floorQuantity;
 
-{
-    floorQuantity = 9;
-}
-
-
+    public LocationBuilding(Integer floorQuantity) {
+        this.id = UUID.randomUUID().getMostSignificantBits();
+        this.floorQuantity = floorQuantity;
+    }
 }

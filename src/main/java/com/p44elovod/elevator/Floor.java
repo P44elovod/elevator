@@ -1,23 +1,23 @@
 package com.p44elovod.elevator;
 
+import lombok.Getter;
+
+import java.util.UUID;
+
+@Getter
 public class Floor {
 
 
-      private Integer nunmber;
-
-      ElevatorCallModule elevatorCallModule = new ElevatorCallModule();
-
-
+    ElevatorCallModule elevatorCallModule;
+    private Long id;
+    private Integer nunmber;
 
 
-    public Integer getNunmber() {
-        return nunmber;
-    }
-
-    public void setNunmber(Integer nunmber) {
+    public Floor(Integer nunmber, ElevatorCallModule elevatorCallModule) {
+        this.id = UUID.randomUUID().getMostSignificantBits();
         this.nunmber = nunmber;
+        this.elevatorCallModule = elevatorCallModule;
     }
-
 
 
 }
