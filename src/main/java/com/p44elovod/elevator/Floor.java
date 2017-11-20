@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Floor {
 
 
-    ElevatorCallModule elevatorCallModule;
+    private ElevatorCallModule elevatorCallModule;
     private Long id;
     private Integer nunmber;
     private ElevetorDoors elevetorDoors;
