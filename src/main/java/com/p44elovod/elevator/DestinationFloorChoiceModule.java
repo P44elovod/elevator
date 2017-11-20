@@ -8,12 +8,12 @@ import java.util.UUID;
 public class DestinationFloorChoiceModule {
 
     private Long id;
-    private FloorNumbers floorNumber;
+    private Integer floorNumber;
 
-    public DestinationFloorChoiceModule(FloorNumbers floorNumber) {
+    public DestinationFloorChoiceModule(Integer floorNumber) {
         this.id = UUID.randomUUID().getMostSignificantBits();
         this.floorNumber = floorNumber;
     }
 
-    enum FloorNumbers {ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE}
+
 }

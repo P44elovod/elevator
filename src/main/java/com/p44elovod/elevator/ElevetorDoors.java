@@ -9,20 +9,18 @@ import java.util.UUID;
 public class ElevetorDoors {
 
     private Long id;
-    private Double motionSpeed;
+    private double motionSpeed;
+    private DoorsState doorsState;
 
 
-    public ElevetorDoors(Double motionSpeed) {
+    public ElevetorDoors(double motionSpeed, DoorsState doorsState) {
 
         this.id = UUID.randomUUID().getMostSignificantBits();
         this.motionSpeed = motionSpeed;
+        this.doorsState = doorsState;
     }
 
-    public Double getMotionSpeed() {
-        return motionSpeed;
-    }
+    enum DoorsState {OPEN, CLOSED, OPENING, CLOSING}
 
-    public void setMotionSpeed(Double motionSpeed) {
-        this.motionSpeed = motionSpeed;
-    }
+
 }
